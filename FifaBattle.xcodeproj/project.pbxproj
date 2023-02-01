@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAD6271F298A8106009BE115 /* FifaBattleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6271E298A8106009BE115 /* FifaBattleApp.swift */; };
+		BAD62721298A8106009BE115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD62720298A8106009BE115 /* ContentView.swift */; };
+		BAD62723298A8109009BE115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD62722298A8109009BE115 /* Assets.xcassets */; };
+		BAD62726298A8109009BE115 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD62725298A8109009BE115 /* Preview Assets.xcassets */; };
+		BAD62730298A810A009BE115 /* FifaBattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6272F298A810A009BE115 /* FifaBattleTests.swift */; };
+		BAD6273A298A810A009BE115 /* FifaBattleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD62739298A810A009BE115 /* FifaBattleUITests.swift */; };
+		BAD6273C298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6273B298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAD6272C298A8109009BE115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAD62713298A8106009BE115 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAD6271A298A8106009BE115;
+			remoteInfo = FifaBattle;
+		};
+		BAD62736298A810A009BE115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAD62713298A8106009BE115 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAD6271A298A8106009BE115;
+			remoteInfo = FifaBattle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAD6271B298A8106009BE115 /* FifaBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FifaBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD6271E298A8106009BE115 /* FifaBattleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleApp.swift; sourceTree = "<group>"; };
+		BAD62720298A8106009BE115 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BAD62722298A8109009BE115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAD62725298A8109009BE115 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BAD6272B298A8109009BE115 /* FifaBattleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifaBattleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD6272F298A810A009BE115 /* FifaBattleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleTests.swift; sourceTree = "<group>"; };
+		BAD62735298A810A009BE115 /* FifaBattleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifaBattleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD62739298A810A009BE115 /* FifaBattleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleUITests.swift; sourceTree = "<group>"; };
+		BAD6273B298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAD62718298A8106009BE115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAD62728298A8109009BE115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAD62732298A810A009BE115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAD62712298A8106009BE115 = {
+			isa = PBXGroup;
+			children = (
+				BAD6271D298A8106009BE115 /* FifaBattle */,
+				BAD6272E298A810A009BE115 /* FifaBattleTests */,
+				BAD62738298A810A009BE115 /* FifaBattleUITests */,
+				BAD6271C298A8106009BE115 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAD6271C298A8106009BE115 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAD6271B298A8106009BE115 /* FifaBattle.app */,
+				BAD6272B298A8109009BE115 /* FifaBattleTests.xctest */,
+				BAD62735298A810A009BE115 /* FifaBattleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAD6271D298A8106009BE115 /* FifaBattle */ = {
+			isa = PBXGroup;
+			children = (
+				BAD6271E298A8106009BE115 /* FifaBattleApp.swift */,
+				BAD62720298A8106009BE115 /* ContentView.swift */,
+				BAD62722298A8109009BE115 /* Assets.xcassets */,
+				BAD62724298A8109009BE115 /* Preview Content */,
+			);
+			path = FifaBattle;
+			sourceTree = "<group>";
+		};
+		BAD62724298A8109009BE115 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BAD62725298A8109009BE115 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAD6272E298A810A009BE115 /* FifaBattleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAD6272F298A810A009BE115 /* FifaBattleTests.swift */,
+			);
+			path = FifaBattleTests;
+			sourceTree = "<group>";
+		};
+		BAD62738298A810A009BE115 /* FifaBattleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BAD62739298A810A009BE115 /* FifaBattleUITests.swift */,
+				BAD6273B298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift */,
+			);
+			path = FifaBattleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAD6271A298A8106009BE115 /* FifaBattle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAD6273F298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattle" */;
+			buildPhases = (
+				BAD62717298A8106009BE115 /* Sources */,
+				BAD62718298A8106009BE115 /* Frameworks */,
+				BAD62719298A8106009BE115 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FifaBattle;
+			productName = FifaBattle;
+			productReference = BAD6271B298A8106009BE115 /* FifaBattle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAD6272A298A8109009BE115 /* FifaBattleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAD62742298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattleTests" */;
+			buildPhases = (
+				BAD62727298A8109009BE115 /* Sources */,
+				BAD62728298A8109009BE115 /* Frameworks */,
+				BAD62729298A8109009BE115 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAD6272D298A8109009BE115 /* PBXTargetDependency */,
+			);
+			name = FifaBattleTests;
+			productName = FifaBattleTests;
+			productReference = BAD6272B298A8109009BE115 /* FifaBattleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BAD62734298A810A009BE115 /* FifaBattleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAD62745298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattleUITests" */;
+			buildPhases = (
+				BAD62731298A810A009BE115 /* Sources */,
+				BAD62732298A810A009BE115 /* Frameworks */,
+				BAD62733298A810A009BE115 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAD62737298A810A009BE115 /* PBXTargetDependency */,
+			);
+			name = FifaBattleUITests;
+			productName = FifaBattleUITests;
+			productReference = BAD62735298A810A009BE115 /* FifaBattleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAD62713298A8106009BE115 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					BAD6271A298A8106009BE115 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					BAD6272A298A8109009BE115 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BAD6271A298A8106009BE115;
+					};
+					BAD62734298A810A009BE115 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BAD6271A298A8106009BE115;
+					};
+				};
+			};
+			buildConfigurationList = BAD62716298A8106009BE115 /* Build configuration list for PBXProject "FifaBattle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAD62712298A8106009BE115;
+			productRefGroup = BAD6271C298A8106009BE115 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAD6271A298A8106009BE115 /* FifaBattle */,
+				BAD6272A298A8109009BE115 /* FifaBattleTests */,
+				BAD62734298A810A009BE115 /* FifaBattleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAD62719298A8106009BE115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD62726298A8109009BE115 /* Preview Assets.xcassets in Resources */,
+				BAD62723298A8109009BE115 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAD62729298A8109009BE115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAD62733298A810A009BE115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAD62717298A8106009BE115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD62721298A8106009BE115 /* ContentView.swift in Sources */,
+				BAD6271F298A8106009BE115 /* FifaBattleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAD62727298A8109009BE115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD62730298A810A009BE115 /* FifaBattleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAD62731298A810A009BE115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD6273C298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift in Sources */,
+				BAD6273A298A810A009BE115 /* FifaBattleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAD6272D298A8109009BE115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAD6271A298A8106009BE115 /* FifaBattle */;
+			targetProxy = BAD6272C298A8109009BE115 /* PBXContainerItemProxy */;
+		};
+		BAD62737298A810A009BE115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAD6271A298A8106009BE115 /* FifaBattle */;
+			targetProxy = BAD62736298A810A009BE115 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BAD6273D298A810A009BE115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAD6273E298A810A009BE115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAD62740298A810A009BE115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FifaBattle/Preview Content\"";
+				DEVELOPMENT_TEAM = C25857C3M7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Steffanie-Sharma.FifaBattle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAD62741298A810A009BE115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FifaBattle/Preview Content\"";
+				DEVELOPMENT_TEAM = C25857C3M7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Steffanie-Sharma.FifaBattle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAD62743298A810A009BE115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C25857C3M7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Steffanie-Sharma.FifaBattleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FifaBattle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FifaBattle";
+			};
+			name = Debug;
+		};
+		BAD62744298A810A009BE115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C25857C3M7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Steffanie-Sharma.FifaBattleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FifaBattle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FifaBattle";
+			};
+			name = Release;
+		};
+		BAD62746298A810A009BE115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C25857C3M7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Steffanie-Sharma.FifaBattleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FifaBattle;
+			};
+			name = Debug;
+		};
+		BAD62747298A810A009BE115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C25857C3M7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Steffanie-Sharma.FifaBattleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FifaBattle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAD62716298A8106009BE115 /* Build configuration list for PBXProject "FifaBattle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAD6273D298A810A009BE115 /* Debug */,
+				BAD6273E298A810A009BE115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAD6273F298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAD62740298A810A009BE115 /* Debug */,
+				BAD62741298A810A009BE115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAD62742298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAD62743298A810A009BE115 /* Debug */,
+				BAD62744298A810A009BE115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAD62745298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAD62746298A810A009BE115 /* Debug */,
+				BAD62747298A810A009BE115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAD62713298A8106009BE115 /* Project object */;
+}
