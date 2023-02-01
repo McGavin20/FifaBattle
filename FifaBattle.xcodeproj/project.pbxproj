@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23BEE11B42DEB46FBDC207BD /* Pods_FifaBattleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D29EC3325D429AB857EAF3 /* Pods_FifaBattleTests.framework */; };
+		4E766E315262C35328A31ADB /* Pods_FifaBattle_FifaBattleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6726B0EB91A6F9E9DC60BC73 /* Pods_FifaBattle_FifaBattleUITests.framework */; };
+		8B8BCC1333FF2CB22470A30D /* Pods_FifaBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */; };
+		BA3F955C298AC1F000822D55 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3F955B298AC1F000822D55 /* HomeView.swift */; };
 		BAD6271F298A8106009BE115 /* FifaBattleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6271E298A8106009BE115 /* FifaBattleApp.swift */; };
 		BAD62721298A8106009BE115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD62720298A8106009BE115 /* ContentView.swift */; };
 		BAD62723298A8109009BE115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD62722298A8109009BE115 /* Assets.xcassets */; };
@@ -14,6 +18,9 @@
 		BAD62730298A810A009BE115 /* FifaBattleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6272F298A810A009BE115 /* FifaBattleTests.swift */; };
 		BAD6273A298A810A009BE115 /* FifaBattleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD62739298A810A009BE115 /* FifaBattleUITests.swift */; };
 		BAD6273C298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6273B298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift */; };
+		BAD6274C298A8181009BE115 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6274B298A8181009BE115 /* ResetPasswordView.swift */; };
+		BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6274F298A81B8009BE115 /* SignUpView.swift */; };
+		BAD62752298AB115009BE115 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD62751298AB115009BE115 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DB6BA1452989B2173AE7EC7 /* Pods-FifaBattle-FifaBattleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle-FifaBattleUITests.release.xcconfig"; path = "Target Support Files/Pods-FifaBattle-FifaBattleUITests/Pods-FifaBattle-FifaBattleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3BC757F95454A6D76AA312B2 /* Pods-FifaBattle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle.debug.xcconfig"; path = "Target Support Files/Pods-FifaBattle/Pods-FifaBattle.debug.xcconfig"; sourceTree = "<group>"; };
+		3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaBattle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		491674EF738FF58EADA4B426 /* Pods-FifaBattleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattleTests.release.xcconfig"; path = "Target Support Files/Pods-FifaBattleTests/Pods-FifaBattleTests.release.xcconfig"; sourceTree = "<group>"; };
+		6726B0EB91A6F9E9DC60BC73 /* Pods_FifaBattle_FifaBattleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaBattle_FifaBattleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73D29EC3325D429AB857EAF3 /* Pods_FifaBattleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaBattleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8A0A9A8092E96DF0D8921E3 /* Pods-FifaBattle-FifaBattleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle-FifaBattleUITests.debug.xcconfig"; path = "Target Support Files/Pods-FifaBattle-FifaBattleUITests/Pods-FifaBattle-FifaBattleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B14916F67C05EFD2D5D8012C /* Pods-FifaBattleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattleTests.debug.xcconfig"; path = "Target Support Files/Pods-FifaBattleTests/Pods-FifaBattleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA3F955B298AC1F000822D55 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BAD6271B298A8106009BE115 /* FifaBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FifaBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD6271E298A8106009BE115 /* FifaBattleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleApp.swift; sourceTree = "<group>"; };
 		BAD62720298A8106009BE115 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +60,10 @@
 		BAD62735298A810A009BE115 /* FifaBattleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifaBattleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD62739298A810A009BE115 /* FifaBattleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleUITests.swift; sourceTree = "<group>"; };
 		BAD6273B298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BAD6274B298A8181009BE115 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		BAD6274F298A81B8009BE115 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BAD62751298AB115009BE115 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DAF2F77B3DFEE4C4BD1F0861 /* Pods-FifaBattle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle.release.xcconfig"; path = "Target Support Files/Pods-FifaBattle/Pods-FifaBattle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8BCC1333FF2CB22470A30D /* Pods_FifaBattle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23BEE11B42DEB46FBDC207BD /* Pods_FifaBattleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E766E315262C35328A31ADB /* Pods_FifaBattle_FifaBattleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +101,8 @@
 				BAD6272E298A810A009BE115 /* FifaBattleTests */,
 				BAD62738298A810A009BE115 /* FifaBattleUITests */,
 				BAD6271C298A8106009BE115 /* Products */,
+				E15A1EC8B7331ED9EAEC35C1 /* Pods */,
+				CC9A746A6D032421E27B93DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +119,10 @@
 		BAD6271D298A8106009BE115 /* FifaBattle */ = {
 			isa = PBXGroup;
 			children = (
+				BAD62748298A8149009BE115 /* Views */,
 				BAD6271E298A8106009BE115 /* FifaBattleApp.swift */,
 				BAD62720298A8106009BE115 /* ContentView.swift */,
+				BAD62751298AB115009BE115 /* GoogleService-Info.plist */,
 				BAD62722298A8109009BE115 /* Assets.xcassets */,
 				BAD62724298A8109009BE115 /* Preview Content */,
 			);
@@ -127,6 +154,39 @@
 			path = FifaBattleUITests;
 			sourceTree = "<group>";
 		};
+		BAD62748298A8149009BE115 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BAD6274B298A8181009BE115 /* ResetPasswordView.swift */,
+				BAD6274F298A81B8009BE115 /* SignUpView.swift */,
+				BA3F955B298AC1F000822D55 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC9A746A6D032421E27B93DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */,
+				6726B0EB91A6F9E9DC60BC73 /* Pods_FifaBattle_FifaBattleUITests.framework */,
+				73D29EC3325D429AB857EAF3 /* Pods_FifaBattleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E15A1EC8B7331ED9EAEC35C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BC757F95454A6D76AA312B2 /* Pods-FifaBattle.debug.xcconfig */,
+				DAF2F77B3DFEE4C4BD1F0861 /* Pods-FifaBattle.release.xcconfig */,
+				A8A0A9A8092E96DF0D8921E3 /* Pods-FifaBattle-FifaBattleUITests.debug.xcconfig */,
+				1DB6BA1452989B2173AE7EC7 /* Pods-FifaBattle-FifaBattleUITests.release.xcconfig */,
+				B14916F67C05EFD2D5D8012C /* Pods-FifaBattleTests.debug.xcconfig */,
+				491674EF738FF58EADA4B426 /* Pods-FifaBattleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAD6273F298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattle" */;
 			buildPhases = (
+				48041A33EFB9DE8060DAD0E0 /* [CP] Check Pods Manifest.lock */,
 				BAD62717298A8106009BE115 /* Sources */,
 				BAD62718298A8106009BE115 /* Frameworks */,
 				BAD62719298A8106009BE115 /* Resources */,
+				1E4417A660035D71206C70C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAD62742298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattleTests" */;
 			buildPhases = (
+				810439A66018629765CBAD2F /* [CP] Check Pods Manifest.lock */,
 				BAD62727298A8109009BE115 /* Sources */,
 				BAD62728298A8109009BE115 /* Frameworks */,
 				BAD62729298A8109009BE115 /* Resources */,
@@ -169,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAD62745298A810A009BE115 /* Build configuration list for PBXNativeTarget "FifaBattleUITests" */;
 			buildPhases = (
+				CB6208D7F173032A3432CBD0 /* [CP] Check Pods Manifest.lock */,
 				BAD62731298A810A009BE115 /* Sources */,
 				BAD62732298A810A009BE115 /* Frameworks */,
 				BAD62733298A810A009BE115 /* Resources */,
+				FE06C823B7A839C1384D4D83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD62726298A8109009BE115 /* Preview Assets.xcassets in Resources */,
+				BAD62752298AB115009BE115 /* GoogleService-Info.plist in Resources */,
 				BAD62723298A8109009BE115 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,13 +318,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E4417A660035D71206C70C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FifaBattle/Pods-FifaBattle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FifaBattle/Pods-FifaBattle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FifaBattle/Pods-FifaBattle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48041A33EFB9DE8060DAD0E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FifaBattle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		810439A66018629765CBAD2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FifaBattleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB6208D7F173032A3432CBD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FifaBattle-FifaBattleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE06C823B7A839C1384D4D83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FifaBattle-FifaBattleUITests/Pods-FifaBattle-FifaBattleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FifaBattle-FifaBattleUITests/Pods-FifaBattle-FifaBattleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FifaBattle-FifaBattleUITests/Pods-FifaBattle-FifaBattleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAD62717298A8106009BE115 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BAD62721298A8106009BE115 /* ContentView.swift in Sources */,
+				BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */,
 				BAD6271F298A8106009BE115 /* FifaBattleApp.swift in Sources */,
+				BA3F955C298AC1F000822D55 /* HomeView.swift in Sources */,
+				BAD6274C298A8181009BE115 /* ResetPasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +583,7 @@
 		};
 		BAD62740298A810A009BE115 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BC757F95454A6D76AA312B2 /* Pods-FifaBattle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +613,7 @@
 		};
 		BAD62741298A810A009BE115 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAF2F77B3DFEE4C4BD1F0861 /* Pods-FifaBattle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +643,7 @@
 		};
 		BAD62743298A810A009BE115 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14916F67C05EFD2D5D8012C /* Pods-FifaBattleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +664,7 @@
 		};
 		BAD62744298A810A009BE115 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 491674EF738FF58EADA4B426 /* Pods-FifaBattleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +685,7 @@
 		};
 		BAD62746298A810A009BE115 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8A0A9A8092E96DF0D8921E3 /* Pods-FifaBattle-FifaBattleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +704,7 @@
 		};
 		BAD62747298A810A009BE115 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB6BA1452989B2173AE7EC7 /* Pods-FifaBattle-FifaBattleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
