@@ -1,0 +1,6 @@
+framework module Pods_FifaBattle {
+  umbrella header "Pods-FifaBattle-umbrella.h"
+
+  export *
+  module * { export * }
+}

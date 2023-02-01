@@ -1,0 +1,6 @@
+framework module Pods_FifaBattle_FifaBattleUITests {
+  umbrella header "Pods-FifaBattle-FifaBattleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
