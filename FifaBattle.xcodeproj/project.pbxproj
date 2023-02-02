@@ -21,6 +21,7 @@
 		BAD6274C298A8181009BE115 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6274B298A8181009BE115 /* ResetPasswordView.swift */; };
 		BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6274F298A81B8009BE115 /* SignUpView.swift */; };
 		BAD62752298AB115009BE115 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD62751298AB115009BE115 /* GoogleService-Info.plist */; };
+		BAF3EE6E298C3F480047A7E0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF3EE6D298C3F480047A7E0 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		BAD6274F298A81B8009BE115 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BAD62751298AB115009BE115 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAE86496298BC9E300C5916A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BAF3EE6D298C3F480047A7E0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DAF2F77B3DFEE4C4BD1F0861 /* Pods-FifaBattle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle.release.xcconfig"; path = "Target Support Files/Pods-FifaBattle/Pods-FifaBattle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 		BAD6271D298A8106009BE115 /* FifaBattle */ = {
 			isa = PBXGroup;
 			children = (
+				BAF3EE6C298C3F0D0047A7E0 /* dashboard */,
 				BAE86496298BC9E300C5916A /* Info.plist */,
 				BAD62748298A8149009BE115 /* Views */,
 				BAD6271E298A8106009BE115 /* FifaBattleApp.swift */,
@@ -161,9 +164,17 @@
 			children = (
 				BAD6274B298A8181009BE115 /* ResetPasswordView.swift */,
 				BAD6274F298A81B8009BE115 /* SignUpView.swift */,
-				BA3F955B298AC1F000822D55 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BAF3EE6C298C3F0D0047A7E0 /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				BA3F955B298AC1F000822D55 /* HomeView.swift */,
+				BAF3EE6D298C3F480047A7E0 /* HomeViewModel.swift */,
+			);
+			path = dashboard;
 			sourceTree = "<group>";
 		};
 		CC9A746A6D032421E27B93DA /* Frameworks */ = {
@@ -429,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD62721298A8106009BE115 /* ContentView.swift in Sources */,
+				BAF3EE6E298C3F480047A7E0 /* HomeViewModel.swift in Sources */,
 				BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */,
 				BAD6271F298A8106009BE115 /* FifaBattleApp.swift in Sources */,
 				BA3F955C298AC1F000822D55 /* HomeView.swift in Sources */,

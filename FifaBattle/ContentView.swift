@@ -14,11 +14,13 @@ struct ContentView: View {
     @State var showSignUpView : Bool = false
     @State var showResetPasswordView : Bool = false
     @State var showHomeView : Bool = false
+    @AppStorage("isLogged") var isLoggedIn: Bool = false
+    
     var body: some View {
         NavigationView {
             ZStack{
                 //Links to other pages
-                NavigationLink(destination: HomeView(), isActive: $showHomeView, label:{ EmptyView() })
+                NavigationLink(destination: HomeView(), isActive: $isLoggedIn, label:{ EmptyView() })
                 //Background Color
                 Color.green
                     .ignoresSafeArea()
@@ -94,7 +96,8 @@ struct ContentView: View {
                 print ("Error: \(err.localizedDescription)")
                 return
             }
-            self.showHomeView = true
+//            self.showHomeView = true
+            self.isLoggedIn = true
         }
     }
 }

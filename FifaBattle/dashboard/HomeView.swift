@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
-import FirebaseAuth
 
 struct HomeView: View {
     @Environment(\.presentationMode) var presentation
+    @StateObject private var viewModel: HomeViewModel = .init()
+    @AppStorage("isLogged") var isLoggedIn: Bool = true
+    
     var body: some View {
         ZStack {
             Color.black
@@ -18,17 +20,9 @@ struct HomeView: View {
                 Text("✅User is logged in.")
                     .foregroundColor(Color.white)
                     .padding()
-        
                 
                 Button {
-                    let firebaseAuth = Auth.auth()
-                    do {
-                        try firebaseAuth.signOut()
-                        presentation.wrappedValue.dismiss()
-                    } catch let signOutError as NSError {
-                        print("Error signing out: %@", signOutError)
-                    }
-                    
+                    signOut()
                 } label: {
                     Text("Log Out")
                         .frame(maxWidth: .infinity)
@@ -40,6 +34,15 @@ struct HomeView: View {
                 .cornerRadius(16)
             }
             .navigationBarBackButtonHidden(true)
+        }
+    }
+    
+    fileprivate func signOut() {
+        do {
+            try viewModel.signOut()
+            isLoggedIn.toggle()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
         }
     }
 }
