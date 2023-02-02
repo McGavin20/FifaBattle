@@ -29,12 +29,16 @@ struct ContentView: View {
                     .scale(1.35)
                     .foregroundColor(.black)
                 
-                VStack {
-                    Text("Sign In")
-                        .foregroundColor(.white)
-                        .font(.largeTitle)
-                        .bold()
-                        .padding()
+                VStack(spacing: 5) {
+                    Image("sign-in-logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200, alignment: .center)
+//                    Text("Sign In")
+//                        .foregroundColor(.white)
+//                        .font(.largeTitle)
+//                        .bold()
+//                        .padding()
                     TextField("Email", text: $email)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
