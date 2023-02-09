@@ -37,10 +37,12 @@ struct SignUpView: View {
                             .font(.title2)
                             .textFieldStyle(.roundedBorder)
                             .autocapitalization(.none)
+                            
                         
                         SecureField("Password", text: $password, prompt: Text("Enter password..."))
                             .font(.title2)
                             .textFieldStyle(.roundedBorder)
+                            
                         
                         SecureField("Password", text: $passwordAgain, prompt: Text("Enter password again..."))
                             .font(.title2)
@@ -49,7 +51,7 @@ struct SignUpView: View {
                     .padding()
                     .padding(.bottom, 8.0)
                     
-                    // Buttons
+                    // Bottom screen Buttons
                     VStack(spacing: 16) {
                         
                         // Create Account

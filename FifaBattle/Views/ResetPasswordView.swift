@@ -45,6 +45,7 @@ struct ResetPasswordView: View {
                             .frame(width: 340, height: 60)
                             .background(Color.white.opacity(0.9))
                             .cornerRadius(10)
+                            .foregroundColor(.black)
                         
                     }
                     .padding()

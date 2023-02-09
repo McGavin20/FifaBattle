@@ -23,7 +23,7 @@ struct ContentView: View {
                 NavigationLink(destination: HomeView(), isActive: $isLoggedIn, label:{ EmptyView() })
                 //Background Color
                 Color.green
-                    .ignoresSafeArea()
+                    .ignoresSafeArea() 
                 Circle()
                     .scale(1.7)
                     .foregroundColor(.black.opacity(0.15))
@@ -44,6 +44,7 @@ struct ContentView: View {
                     TextField("Email", text: $email)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .foregroundColor(.black)
                         .padding()
                         .frame(width: 300, height: 50)
                         .background(Color.white.opacity(0.9))
@@ -52,6 +53,7 @@ struct ContentView: View {
                     SecureField("Password", text: $password)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
+                        .foregroundColor(.black)
                         .padding()
                         .frame(width: 300, height: 50)
                         .background(Color.white.opacity(0.9))
