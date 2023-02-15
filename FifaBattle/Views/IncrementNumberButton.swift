@@ -13,56 +13,66 @@ struct IncrementNumberButton: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("You:")
-                HStack {
-                    Button(action: {
-                        youNumber -= 1
-                    }, label: {
-                        Image(systemName: "minus.circle")
-                            .foregroundColor(.red)
-                    })
-                    Text("\(youNumber)")
-                        .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 2)
-                        )
-                    Button(action: {
-                        youNumber += 1
-                    }, label: {
-                        Image(systemName: "plus.circle")
-                            .foregroundColor(.green)
-                    })
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [.green, .white, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+                VStack {
+                    Text("You:")
+                        .font(.title)
+                        .bold()
+                    HStack {
+                        Button(action: {
+                            youNumber -= 1
+                        }, label: {
+                            Image(systemName: "minus.circle")
+                                .foregroundColor(.red)
+                        })
+                        Text("\(youNumber)")
+                            .padding()
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue, lineWidth: 2)
+                            )
+                        Button(action: {
+                            youNumber += 1
+                        }, label: {
+                            Image(systemName: "plus.circle")
+                                .foregroundColor(.green)
+                        })
+                    }
+                    Spacer()
+                    Text("Opponent:")
+                        .font(.title)
+                        .bold()
+                    HStack {
+                        Button(action: {
+                            opponentNumber += 1
+                        }, label: {
+                            Image(systemName: "minus.circle")
+                                .foregroundColor(.red)
+                        })
+                        Text("\(opponentNumber)")
+                            .padding()
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue, lineWidth: 2)
+                            )
+                        Button(action: {
+                            opponentNumber -= 1
+                        }, label: {
+                            Image(systemName: "plus.circle")
+                                .foregroundColor(.green)
+                        })
+                    }
+                    Spacer()
+                    NavigationLink(destination: HomeView()) {
+                        Text("Confirm")
+                            .font(.largeTitle)
+                            .bold()
+                    }
                 }
-                Spacer()
-                Text("Opponent:")
-                HStack {
-                    Button(action: {
-                        opponentNumber += 1
-                    }, label: {
-                        Image(systemName: "minus.circle")
-                            .foregroundColor(.red)
-                    })
-                    Text("\(opponentNumber)")
-                        .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.blue, lineWidth: 2)
-                        )
-                    Button(action: {
-                        opponentNumber -= 1
-                    }, label: {
-                        Image(systemName: "plus.circle")
-                            .foregroundColor(.green)
-                    })
-                }
-                Spacer()
-                NavigationLink(destination: HomeView()) {
-                    Text("Confirm")
-                }
+                .navigationTitle("Score:")
             }
-            .navigationTitle("Score")
         }
         .navigationBarBackButtonHidden(true)
     }
