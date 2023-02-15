@@ -8,30 +8,28 @@
 import SwiftUI
 
 struct IncrementNumberButton: View {
-    @State private var number = 0
+    @State private var youNumber = 0
+    @State private var opponentNumber = 0
     
     var body: some View {
         NavigationView {
-            //        ZStack {
-            //            Color.black
-            //                .ignoresSafeArea()
             VStack {
                 Text("You:")
                 HStack {
                     Button(action: {
-                        number -= 1
+                        youNumber -= 1
                     }, label: {
                         Image(systemName: "minus.circle")
                             .foregroundColor(.red)
                     })
-                    Text("\(number)")
+                    Text("\(youNumber)")
                         .padding()
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.blue, lineWidth: 2)
                         )
                     Button(action: {
-                        number += 1
+                        youNumber += 1
                     }, label: {
                         Image(systemName: "plus.circle")
                             .foregroundColor(.green)
@@ -41,19 +39,19 @@ struct IncrementNumberButton: View {
                 Text("Opponent:")
                 HStack {
                     Button(action: {
-                        number += 1
+                        opponentNumber += 1
                     }, label: {
                         Image(systemName: "minus.circle")
                             .foregroundColor(.red)
                     })
-                    Text("\(number)")
+                    Text("\(opponentNumber)")
                         .padding()
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.blue, lineWidth: 2)
                         )
                     Button(action: {
-                        number -= 1
+                        opponentNumber -= 1
                     }, label: {
                         Image(systemName: "plus.circle")
                             .foregroundColor(.green)
@@ -64,10 +62,12 @@ struct IncrementNumberButton: View {
                     Text("Confirm")
                 }
             }
+            .navigationTitle("Score")
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
-//}
+
 
 struct IncrementNumberButton_Previews: PreviewProvider {
     static var previews: some View {
