@@ -12,7 +12,7 @@ struct HeaderView: View {
         NavigationView {
             Text("My View")
                 .navigationBarItems(trailing:
-                                        Button(action: {
+                Button(action: {
                     // Action to perform when the button is tapped
                 }) {
                     Image(systemName: "plus")

@@ -11,6 +11,7 @@
 		2F4A67D0299D0BB800D18366 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A67CF299D0BB800D18366 /* HeaderView.swift */; };
 		2F4A67D2299D145200D18366 /* CalculatePointsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A67D1299D145200D18366 /* CalculatePointsViewModel.swift */; };
 		2F4A67D4299D15F700D18366 /* CalculatePointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A67D3299D15F700D18366 /* CalculatePointsView.swift */; };
+		2F4A67D6299D1D8000D18366 /* IncrementNumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A67D5299D1D8000D18366 /* IncrementNumberButton.swift */; };
 		2F4EBE902995129400D53080 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EBE8F2995129400D53080 /* TableView.swift */; };
 		4E766E315262C35328A31ADB /* Pods_FifaBattle_FifaBattleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6726B0EB91A6F9E9DC60BC73 /* Pods_FifaBattle_FifaBattleUITests.framework */; };
 		8B8BCC1333FF2CB22470A30D /* Pods_FifaBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */; };
@@ -50,6 +51,7 @@
 		2F4A67CF299D0BB800D18366 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		2F4A67D1299D145200D18366 /* CalculatePointsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePointsViewModel.swift; sourceTree = "<group>"; };
 		2F4A67D3299D15F700D18366 /* CalculatePointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePointsView.swift; sourceTree = "<group>"; };
+		2F4A67D5299D1D8000D18366 /* IncrementNumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementNumberButton.swift; sourceTree = "<group>"; };
 		2F4EBE8F2995129400D53080 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		3BC757F95454A6D76AA312B2 /* Pods-FifaBattle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle.debug.xcconfig"; path = "Target Support Files/Pods-FifaBattle/Pods-FifaBattle.debug.xcconfig"; sourceTree = "<group>"; };
 		3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaBattle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 				2F4EBE8F2995129400D53080 /* TableView.swift */,
 				2F4A67CF299D0BB800D18366 /* HeaderView.swift */,
 				2F4A67D3299D15F700D18366 /* CalculatePointsView.swift */,
+				2F4A67D5299D1D8000D18366 /* IncrementNumberButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 			files = (
 				BAD62721298A8106009BE115 /* ContentView.swift in Sources */,
 				BAF3EE6E298C3F480047A7E0 /* HomeViewModel.swift in Sources */,
+				2F4A67D6299D1D8000D18366 /* IncrementNumberButton.swift in Sources */,
 				BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */,
 				2F4EBE902995129400D53080 /* TableView.swift in Sources */,
 				2F4A67D4299D15F700D18366 /* CalculatePointsView.swift in Sources */,
