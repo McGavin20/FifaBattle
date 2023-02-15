@@ -13,27 +13,30 @@ struct HomeView: View {
     @AppStorage("isLogged") var isLoggedIn: Bool = true
     
     var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            VStack {
-                Text("✅User is logged in.")
-                    .foregroundColor(Color.white)
-                    .padding()
+        NavigationView {
+            ZStack {
+                Color.black
+                    .ignoresSafeArea()
                 
-                Button {
-                    signOut()
-                } label: {
-                    Text("Log Out")
-                        .frame(maxWidth: .infinity)
-                        .font(.title2)
+                VStack {
+                    NavigationLink(destination: TableView()){
+                        TableView()
+                    }
+                    
+                    Button {
+                        signOut()
+                    } label: {
+                        Text("Log Out")
+                            .frame(maxWidth: .infinity)
+                            .font(.title2)
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.green)
+                    .cornerRadius(16)
                 }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.green)
-                .cornerRadius(16)
+                .navigationBarBackButtonHidden(true)
             }
-            .navigationBarBackButtonHidden(true)
         }
     }
     
