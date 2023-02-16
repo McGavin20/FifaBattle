@@ -71,9 +71,9 @@ struct TableView: View {
                                 }
                             }
                         }
-                        .frame(height: 100)
+                        .frame(width: 350, height: 100)
                     }
-                    
+                    //NavigationLink()
 //                    Button(action: {
 //                        navigateToNextScreen = true
 //                    }, label: {

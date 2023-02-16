@@ -16,7 +16,9 @@ struct FifaBattleApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            //ProfileView()
+            ProfileFormView()
         }
     }
     
