@@ -14,40 +14,38 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.black
-                    .ignoresSafeArea()
-                
+        
                 VStack {
                     NavigationLink(destination: TableView()){
                         TableView()
                     }
                     
-                    Button {
-                        signOut()
-                    } label: {
-                        Text("Log Out")
-                            .frame(maxWidth: .infinity)
-                            .font(.title2)
-                    }
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.green)
-                    .cornerRadius(16)
+//                    Button {
+//                        //signOut()
+//                    } label: {
+//                        Text("Log Out")
+//                            .frame(maxWidth: .infinity)
+//                            .font(.title2)
+//                    }
+//                    .padding()
+//                    .foregroundColor(.white)
+//                    .background(Color.green)
+//                    .cornerRadius(16)
                 }
-                .navigationBarBackButtonHidden(true)
+                
             }
-        }
+
+        .navigationBarBackButtonHidden(true)
     }
     
-    fileprivate func signOut() {
-        do {
-            try viewModel.signOut()
-            isLoggedIn.toggle()
-        } catch let signOutError as NSError {
-            print("Error signing out: %@", signOutError)
-        }
-    }
+//    fileprivate func signOut() {
+//        do {
+//            try viewModel.signOut()
+//            isLoggedIn.toggle()
+//        } catch let signOutError as NSError {
+//            print("Error signing out: %@", signOutError)
+//        }
+//    }
 }
 
 struct HomeView_Previews: PreviewProvider {
