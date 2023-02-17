@@ -14,7 +14,10 @@ struct ProfileFormView: View {
     @State private var favoriteTeam: String = ""
     @State private var favoritePlayer: String = ""
     @State private var profileImage: UIImage?
+    @State private var profile: Profile?
     @State private var isShowingImagePicker = false
+    
+    
     
     var body: some View {
         NavigationView {
@@ -45,13 +48,14 @@ struct ProfileFormView: View {
                     }
                 }
                 .navigationBarTitle("Profile Form")
+                .foregroundColor(.green)
                 .navigationBarItems(
                     leading: Button("Cancel") {
                         // Handle cancel action
                     },
                     trailing: Button("Save") {
                         // Save profile information and dismiss form
-                        let profile = Profile(
+                        self.profile = Profile(
                             name: name,
                             username: username,
                             favoriteTeam: favoriteTeam,
@@ -66,8 +70,22 @@ struct ProfileFormView: View {
                 .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage) {
                     ImagePicker(image: self.$profileImage)
                 }
+                
             }
             .environment(\.colorScheme, .dark)
+            .navigationViewStyle(StackNavigationViewStyle())
+            .background(
+                NavigationLink(
+                    destination: ProfileView(profile: Profile(name: name, username: username, favoriteTeam: favoriteTeam, favoritePlayer: favoritePlayer, profileImage: profileImage)),
+                    isActive: Binding<Bool>(
+                        get: { self.profileImage != nil },
+                        set: { if !$0 { self.profileImage = nil } }
+                    )
+                ) {
+                    EmptyView()
+                }
+            )
+
         }
     }
     
@@ -85,6 +103,7 @@ struct Profile {
     var favoritePlayer: String
     var profileImage: UIImage?
 }
+
 
 struct ProfileFormView_Previews: PreviewProvider {
     static var previews: some View {

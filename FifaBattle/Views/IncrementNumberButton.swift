@@ -8,77 +8,53 @@
 import SwiftUI
 
 struct IncrementNumberButton: View {
-    @State private var youNumber = 0
-    @State private var opponentNumber = 0
+    @State private var playerGoals = 0
+    @State private var opponentGoals = 0
     
     var body: some View {
         NavigationView {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [.green, .white, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                Color.green
                     .ignoresSafeArea()
+                Circle()
+                    .scale(1.7)
+                    .foregroundColor(.black.opacity(0.15))
+                Circle()
+                    .scale(1.35)
+                    .foregroundColor(.black)
                 VStack {
-                    Text("You:")
-                        .font(.title)
-                        .bold()
                     HStack {
-                        Button(action: {
-                            youNumber -= 1
-                        }, label: {
-                            Image(systemName: "minus.circle")
-                                .foregroundColor(.red)
-                        })
-                        Text("\(youNumber)")
-                            .padding()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.blue, lineWidth: 2)
-                            )
-                        Button(action: {
-                            youNumber += 1
-                        }, label: {
-                            Image(systemName: "plus.circle")
-                                .foregroundColor(.green)
-                        })
+                        Text("Player Goals: \(playerGoals)")
+                            .foregroundColor(.gray)
+                        Stepper("", value: $playerGoals, in: 0...20)
+                            .foregroundColor(.gray)
                     }
-                    Spacer()
-                    Text("Opponent:")
-                        .font(.title)
-                        .bold()
+                    .padding()
                     HStack {
-                        Button(action: {
-                            opponentNumber += 1
-                        }, label: {
-                            Image(systemName: "minus.circle")
-                                .foregroundColor(.red)
-                        })
-                        Text("\(opponentNumber)")
-                            .padding()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.blue, lineWidth: 2)
-                            )
-                        Button(action: {
-                            opponentNumber -= 1
-                        }, label: {
-                            Image(systemName: "plus.circle")
-                                .foregroundColor(.green)
-                        })
+                        Text("Opponent Goals: \(opponentGoals)")
+                            .foregroundColor(.gray)
+                        Stepper("", value: $opponentGoals, in: 0...20)
+                            .foregroundColor(.gray)
                     }
-                    Spacer()
+                    .padding()
                     NavigationLink(destination: HomeView()) {
                         Text("Confirm")
-                            .font(.largeTitle)
+                            .font(.title)
+                            .frame(width: 180, height: 50)
+                            .background(Color.green)
+                            .cornerRadius(12)
+                            .foregroundColor(.black)
                             .bold()
                     }
                 }
-                .navigationTitle("Score:")
             }
-            .navigationBarHidden(true)
-
+            .navigationTitle("Score:")
         }
+        .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
     }
 }
+
 
 
 struct IncrementNumberButton_Previews: PreviewProvider {

@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct ProfileView: View {
     var profile: Profile
     
@@ -21,7 +23,7 @@ struct ProfileView: View {
                     .padding(.bottom, 20)
             }
             
-            Text("Bio: \(profile.name)\nUsername: \(profile.username)\nFavorite Team: \(profile.favoriteTeam)\nFavorite Player: \(profile.favoritePlayer)")
+            Text("Name: \(profile.name)\nUsername: \(profile.username)\nFavorite Team: \(profile.favoriteTeam)\nFavorite Player: \(profile.favoritePlayer)")
                 .padding(.bottom, 20)
                 .multilineTextAlignment(.center)
         }
