@@ -35,77 +35,51 @@ struct TableView: View {
         Player(name: "David", goals: 3, points: 9)
     ]
     var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            
-            NavigationView {
-                
+        
+        
+        NavigationView {
+            ScrollView {
                 VStack {
-                    ScrollView {
-                        VStack {
+                    HStack {
+                        Text("Name")
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.green)
+                            .font(.headline)
+                        Text("Score")
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.green)
+                            .font(.headline)
+                        Text("Points")
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.green)
+                            .font(.headline)
+                    }
+                    ForEach(players) { player in
+                        NavigationLink(destination: DetailView(player: player)) {
                             HStack {
-                                Text("Name")
+                                Text(player.name)
                                     .frame(maxWidth: .infinity)
-                                    .foregroundColor(.green)
-                                    .font(.headline)
-                                Text("Score")
+                                Text("\(player.goals)")
                                     .frame(maxWidth: .infinity)
-                                    .foregroundColor(.green)
-                                    .font(.headline)
-                                Text("Points")
+                                Text("\(player.points)")
                                     .frame(maxWidth: .infinity)
-                                    .foregroundColor(.green)
-                                    .font(.headline)
-                            }
-                            ForEach(players) { player in
-                                NavigationLink(destination: DetailView(player: player)) {
-                                    HStack {
-                                        Text(player.name)
-                                            .frame(maxWidth: .infinity)
-                                        Text("\(player.goals)")
-                                            .frame(maxWidth: .infinity)
-                                        Text("\(player.points)")
-                                            .frame(maxWidth: .infinity)
-                                    }
-                                }
                             }
                         }
+                        .foregroundColor(.gray)
                         .frame(width: 350, height: 100)
                     }
-                    //NavigationLink()
-//                    Button(action: {
-//                        navigateToNextScreen = true
-//                    }, label: {
-//                        Image(systemName: "plus")
-//                    })
-//                    NavigationLink(destination: IncrementNumberButton(), isActive: $navigateToNextScreen) {
-//                        EmptyView()
-//                    }
-                    //.hidden()
                 }
-                .navigationTitle("Fifa Battle Table")
-                .navigationBarItems(
-                    leading:
-                        NavigationLink(destination: IncrementNumberButton(), isActive: $navigateToNextScreen) {
-                                Image(systemName: "plus")
-                            },
-                    trailing:
-                        Button(action: {
-                            // Handle action
-                            signOut()
-                        }, label: {
-                            Text("Log Out")
-                                .foregroundColor(.green)
-                        })
-                )
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
+            .fixedSize(horizontal: false, vertical: true)
         }
+        .navigationTitle("Fifa Battle Table")
+        .toolbarBackground(Color.green, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .navigationBarBackButtonHidden(true)
         .environment(\.colorScheme, .dark)
     }
-    fileprivate func signOut() {
+
+    private func signOut() {
         do {
             try viewModel.signOut()
             isLoggedIn.toggle()
