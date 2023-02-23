@@ -27,11 +27,9 @@ struct DetailView: View {
 struct TableView: View {
     @State private var navigateToNextScreen = false
     @StateObject private var viewModel: HomeViewModel = .init()
-    @State private var selectedTab: Tab = .house
+    
     @AppStorage("isLogged") var isLoggedIn: Bool = true
-    init() {
-        UITabBar.appearance().isHidden = true
-    }
+    
     
     let players = [
         Player(name: "John", goals: 10, points: 30),
@@ -72,22 +70,20 @@ struct TableView: View {
                             .frame(width: 350, height: 100)
                         }
                     }
+                    
                 }
                 .fixedSize(horizontal: false, vertical: true)
                 
 
             }
             .navigationTitle("Fifa Battle Table")
-            .toolbarBackground(Color.green, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
+//            .toolbarBackground(Color.green, for: .navigationBar)
+//            .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarBackButtonHidden(true)
             
-            VStack {
-                Spacer()
-                CustomTabView(selectedTab: $selectedTab)
-            }
             
         }
+        
         .environment(\.colorScheme, .dark)
     }
     

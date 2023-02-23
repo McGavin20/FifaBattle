@@ -7,89 +7,124 @@
 
 import SwiftUI
 
-enum  Tab: String, CaseIterable {
-    case house
-    case sportscourt
-    case person
-    case gearshape
-}
-
 struct CustomTabView: View {
-    @Binding var selectedTab: Tab
-    
-    private var fillImage: String {
-        selectedTab.rawValue + ".fill"
-    }
-    
+    @State var selected = 0
+    @State var isHome: Bool = false
+    @State var isScoreRecorded: Bool = false
+    @State var isProfileRevealed: Bool = false
+    @AppStorage("isLogged") var isLoggedIn: Bool = false
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            NavigationView {
-                // View to navigate to
-                //TableView()
-            }
-            .tabItem {
-                Image(systemName: "house.fill")
-                Text("House")
-            }
-            .tag(Tab.house)
-
-            
-            NavigationView {
-                IncrementNumberButton()
-            }
-            .tabItem {
-                Image(systemName: "sportscourt.fill")
-                Text("Sports Court")
-            }
-            .tag(Tab.sportscourt)
-            
-            
-            NavigationView {
-                ProfileFormView()
-            }
-            .tabItem {
-                Image(systemName: "person.fill")
-                Text("Person")
-            }
-            .tag(Tab.person)
-            
-            Text("Gear Shape View")
-                .tabItem {
-                    Image(systemName: "gearshape.fill")
-                    Text("Gear Shape")
-                }
-                .tag(Tab.gearshape)
-        }
         
-        VStack {
-            HStack {
-                ForEach(Tab.allCases, id: \.rawValue) { tab in
-                    Spacer()
-                    Image(systemName: selectedTab == tab ? fillImage :
-                            tab.rawValue)
-                    .scaleEffect(tab == selectedTab ? 1.25 : 1.0)
-                    .foregroundColor(selectedTab == tab ? .green : .gray)
-                    .font(.system(size: 22))
-                    .onTapGesture {
-                        withAnimation(.easeIn(duration: 0.1)) {
-                            selectedTab = tab
+        ZStack(alignment: .bottom){
+            NavigationView{
+                
+                VStack{
+                    if self.selected == 0{
+                        //NavigationLink(destination: TableView(), isActive: $isLoggedIn, label:{ EmptyView() })
+                        NavigationLink(destination: TableView()) {
+                            TableView()
                         }
                     }
-                    Spacer()
+                    else if self.selected == 1{
+                        NavigationLink(destination: IncrementNumberButton()) {
+                            IncrementNumberButton()
+                        }
+                    }
+                    else if self.selected == 2{
+                        NavigationLink(destination: ProfileFormView()) {
+                            ProfileFormView()
+                        }
+                    }
+                    else{
+                        GeometryReader{_ in
+                            VStack(spacing: 15){
+                                Spacer()
+                                Text("Settings")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                Image("4").resizable().frame(height: 250).cornerRadius(15)
+                                Spacer()
+                            }.padding()
+                        }
+                    }
                     
                 }
-            }
-            .frame(width: nil, height: 60)
-            .background(.thinMaterial)
-            .cornerRadius(20)
-            .padding()
+            }.background(Color.gray)
+            .edgesIgnoringSafeArea(.all)
+            
+            FloatingTabbar(selected: self.$selected)
         }
     }
 }
+
 
 struct CustomTabView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTabView(selectedTab: .constant(.house))
+        CustomTabView()
+    }
+}
+
+struct FloatingTabbar : View {
+    
+    @Binding var selected : Int
+    @State var expand = false
+    
+    var body : some View{
+        
+        HStack{
+            
+            Spacer(minLength: 0)
+            
+            HStack{
+                if !self.expand{
+                    
+                    Button(action: {
+                        self.expand.toggle()
+                    }) {
+                        Image(systemName: "arrow.left").foregroundColor(.green).padding()
+                    }
+                }
+                else{
+                    Button(action: {
+                        self.selected = 0
+                    }) {
+                        Image(systemName: "house").foregroundColor(self.selected == 0 ? .green : .gray).padding(.horizontal)
+                    }
+                    
+                    Spacer(minLength: 15)
+                    
+                    Button(action: {
+                        self.selected = 1
+                    }) {
+                        Image(systemName: "sportscourt").foregroundColor(self.selected == 1 ? .green : .gray).padding(.horizontal)
+                    }
+                    
+                    Spacer(minLength: 15)
+                    
+                    Button(action: {
+                        self.selected = 2
+                    }) {
+                        Image(systemName: "person").foregroundColor(self.selected == 2 ? .green : .gray).padding(.horizontal)
+                    }
+                    Spacer(minLength: 15)
+                    
+                    Button(action: {
+                        self.selected = 3
+                    }) {
+                        Image(systemName: "gearshape").foregroundColor(self.selected == 3 ? .green : .gray).padding(.horizontal)
+                    }
+                }
+            }.padding(.vertical,self.expand ? 20 : 8)
+                .padding(.horizontal,self.expand ? 35 : 8)
+                .background(Color.black)
+                .clipShape(Capsule())
+                .padding(22)
+                .onLongPressGesture {
+                    
+                    self.expand.toggle()
+                }
+                .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
+        }
     }
 }

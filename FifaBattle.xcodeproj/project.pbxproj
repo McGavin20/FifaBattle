@@ -19,7 +19,6 @@
 		2FBF0AE629A4E11E00C7CB82 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF0AE529A4E11E00C7CB82 /* CustomTabView.swift */; };
 		4E766E315262C35328A31ADB /* Pods_FifaBattle_FifaBattleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6726B0EB91A6F9E9DC60BC73 /* Pods_FifaBattle_FifaBattleUITests.framework */; };
 		8B8BCC1333FF2CB22470A30D /* Pods_FifaBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */; };
-		BA3F955C298AC1F000822D55 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3F955B298AC1F000822D55 /* HomeView.swift */; };
 		BAD6271F298A8106009BE115 /* FifaBattleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6271E298A8106009BE115 /* FifaBattleApp.swift */; };
 		BAD62721298A8106009BE115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD62720298A8106009BE115 /* ContentView.swift */; };
 		BAD62723298A8109009BE115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD62722298A8109009BE115 /* Assets.xcassets */; };
@@ -68,7 +67,6 @@
 		73D29EC3325D429AB857EAF3 /* Pods_FifaBattleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaBattleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A0A9A8092E96DF0D8921E3 /* Pods-FifaBattle-FifaBattleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle-FifaBattleUITests.debug.xcconfig"; path = "Target Support Files/Pods-FifaBattle-FifaBattleUITests/Pods-FifaBattle-FifaBattleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B14916F67C05EFD2D5D8012C /* Pods-FifaBattleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattleTests.debug.xcconfig"; path = "Target Support Files/Pods-FifaBattleTests/Pods-FifaBattleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BA3F955B298AC1F000822D55 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BAD6271B298A8106009BE115 /* FifaBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FifaBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD6271E298A8106009BE115 /* FifaBattleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleApp.swift; sourceTree = "<group>"; };
 		BAD62720298A8106009BE115 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 		BAF3EE6C298C3F0D0047A7E0 /* dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				BA3F955B298AC1F000822D55 /* HomeView.swift */,
 				BAF3EE6D298C3F480047A7E0 /* HomeViewModel.swift */,
 			);
 			path = dashboard;
@@ -486,7 +483,6 @@
 				2F4A67DA299E655400D18366 /* ProfileFormView.swift in Sources */,
 				2FBF0AE629A4E11E00C7CB82 /* CustomTabView.swift in Sources */,
 				BAD6271F298A8106009BE115 /* FifaBattleApp.swift in Sources */,
-				BA3F955C298AC1F000822D55 /* HomeView.swift in Sources */,
 				BAD6274C298A8181009BE115 /* ResetPasswordView.swift in Sources */,
 				2F4A67D0299D0BB800D18366 /* HeaderView.swift in Sources */,
 			);

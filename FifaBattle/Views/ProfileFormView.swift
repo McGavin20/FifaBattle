@@ -93,6 +93,13 @@ struct ProfileFormView: View {
         guard let profileImage = profileImage else { return }
         let imageData = profileImage.jpegData(compressionQuality: 0.5)
         // Handle the loaded image data, e.g., display the image preview in the form view
+        self.profile = Profile(
+            name: name,
+            username: username,
+            favoriteTeam: favoriteTeam,
+            favoritePlayer: favoritePlayer,
+            profileImage: profileImage
+        )
     }
 }
 
