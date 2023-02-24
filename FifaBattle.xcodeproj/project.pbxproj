@@ -16,6 +16,8 @@
 		2F4A67DA299E655400D18366 /* ProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A67D9299E655400D18366 /* ProfileFormView.swift */; };
 		2F4A67DE299E697800D18366 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A67DD299E697800D18366 /* ImagePicker.swift */; };
 		2F4EBE902995129400D53080 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EBE8F2995129400D53080 /* TableView.swift */; };
+		2FB4CC2129A90F4E0066AE72 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC2029A90F4E0066AE72 /* CreditsView.swift */; };
+		2FB4CC2429A912A50066AE72 /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC2329A912A50066AE72 /* CenterModifier.swift */; };
 		2FBF0AE629A4E11E00C7CB82 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF0AE529A4E11E00C7CB82 /* CustomTabView.swift */; };
 		4E766E315262C35328A31ADB /* Pods_FifaBattle_FifaBattleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6726B0EB91A6F9E9DC60BC73 /* Pods_FifaBattle_FifaBattleUITests.framework */; };
 		8B8BCC1333FF2CB22470A30D /* Pods_FifaBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */; };
@@ -59,6 +61,8 @@
 		2F4A67D9299E655400D18366 /* ProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFormView.swift; sourceTree = "<group>"; };
 		2F4A67DD299E697800D18366 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2F4EBE8F2995129400D53080 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		2FB4CC2029A90F4E0066AE72 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		2FB4CC2329A912A50066AE72 /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
 		2FBF0AE529A4E11E00C7CB82 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		3BC757F95454A6D76AA312B2 /* Pods-FifaBattle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle.debug.xcconfig"; path = "Target Support Files/Pods-FifaBattle/Pods-FifaBattle.debug.xcconfig"; sourceTree = "<group>"; };
 		3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaBattle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +126,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2FB4CC2229A9126F0066AE72 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2FB4CC2329A912A50066AE72 /* CenterModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		BAD62712298A8106009BE115 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 		BAD6271D298A8106009BE115 /* FifaBattle */ = {
 			isa = PBXGroup;
 			children = (
+				2FB4CC2229A9126F0066AE72 /* Modifiers */,
 				2F4EBE922995143C00D53080 /* ViewModel */,
 				BAF3EE6C298C3F0D0047A7E0 /* dashboard */,
 				BAE86496298BC9E300C5916A /* Info.plist */,
@@ -197,6 +210,7 @@
 				2F4A67D7299E5E3E00D18366 /* ProfileView.swift */,
 				2F4A67D9299E655400D18366 /* ProfileFormView.swift */,
 				2FBF0AE529A4E11E00C7CB82 /* CustomTabView.swift */,
+				2FB4CC2029A90F4E0066AE72 /* CreditsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -474,6 +488,7 @@
 				BAD62721298A8106009BE115 /* ContentView.swift in Sources */,
 				BAF3EE6E298C3F480047A7E0 /* HomeViewModel.swift in Sources */,
 				2F4A67D6299D1D8000D18366 /* IncrementNumberButton.swift in Sources */,
+				2FB4CC2129A90F4E0066AE72 /* CreditsView.swift in Sources */,
 				2F4A67DE299E697800D18366 /* ImagePicker.swift in Sources */,
 				BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */,
 				2F4A67D8299E5E3E00D18366 /* ProfileView.swift in Sources */,
@@ -485,6 +500,7 @@
 				BAD6271F298A8106009BE115 /* FifaBattleApp.swift in Sources */,
 				BAD6274C298A8181009BE115 /* ResetPasswordView.swift in Sources */,
 				2F4A67D0299D0BB800D18366 /* HeaderView.swift in Sources */,
+				2FB4CC2429A912A50066AE72 /* CenterModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

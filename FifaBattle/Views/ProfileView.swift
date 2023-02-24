@@ -70,6 +70,7 @@ struct ProfileView: View {
                         .background(Blurview())
                         .clipShape(BottomShape())
                         .cornerRadius(25)
+                        .offset(y: -67)
                     
                     ZStack{
                         
@@ -86,7 +87,7 @@ struct ProfileView: View {
                         
                         Circle().stroke(Color.orange, lineWidth: 5).frame(width: 70, height: 70)
                         
-                    }.offset(y: -35)
+                    }.offset(y: -92)
                     
                     HStack{
                         
@@ -113,7 +114,7 @@ struct ProfileView: View {
                                 .background(Color.white)
                                 .clipShape(Circle())
                         }
-                    }.offset(y: -25)
+                    }.offset(y: -92)
                         .padding(.horizontal,35)
                 }
                 

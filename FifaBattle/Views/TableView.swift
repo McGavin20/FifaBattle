@@ -27,7 +27,6 @@ struct DetailView: View {
 struct TableView: View {
     @State private var navigateToNextScreen = false
     @StateObject private var viewModel: HomeViewModel = .init()
-    
     @AppStorage("isLogged") var isLoggedIn: Bool = true
     
     
@@ -69,19 +68,21 @@ struct TableView: View {
                             .foregroundColor(.gray)
                             .frame(width: 350, height: 100)
                         }
+                        CreditsView()
+                            .modifier(CenterModifier())
                     }
                     
                 }
                 .navigationTitle("Fifa Battle Table")
-                .offset(y: -60)
-                
+                .offset(y: -20)
                 .fixedSize(horizontal: false, vertical: true)
                 
-
+                
+                
             }
             
-//            .toolbarBackground(Color.green, for: .navigationBar)
-//            .toolbarBackground(.visible, for: .navigationBar)
+            //            .toolbarBackground(Color.green, for: .navigationBar)
+            //            .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarBackButtonHidden(true)
             
             

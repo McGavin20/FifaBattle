@@ -17,7 +17,7 @@ struct FifaBattleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            //CustomTabView()
+            //CreditsView()
         }
     }
     
