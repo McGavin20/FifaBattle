@@ -72,11 +72,14 @@ struct TableView: View {
                     }
                     
                 }
+                .navigationTitle("Fifa Battle Table")
+                .offset(y: -60)
+                
                 .fixedSize(horizontal: false, vertical: true)
                 
 
             }
-            .navigationTitle("Fifa Battle Table")
+            
 //            .toolbarBackground(Color.green, for: .navigationBar)
 //            .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarBackButtonHidden(true)

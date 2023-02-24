@@ -21,20 +21,13 @@ struct CustomTabView: View {
                 
                 VStack{
                     if self.selected == 0{
-                        //NavigationLink(destination: TableView(), isActive: $isLoggedIn, label:{ EmptyView() })
-                        NavigationLink(destination: TableView()) {
-                            TableView()
-                        }
+                        TableView()
                     }
                     else if self.selected == 1{
-                        NavigationLink(destination: IncrementNumberButton()) {
-                            IncrementNumberButton()
-                        }
+                        IncrementNumberButton()
                     }
                     else if self.selected == 2{
-                        NavigationLink(destination: ProfileFormView()) {
-                            ProfileFormView()
-                        }
+                        ProfileView()
                     }
                     else{
                         GeometryReader{_ in
@@ -52,7 +45,7 @@ struct CustomTabView: View {
                 }
             }.background(Color.gray)
             .edgesIgnoringSafeArea(.all)
-            
+            .navigationBarBackButtonHidden(true)
             FloatingTabbar(selected: self.$selected)
         }
     }

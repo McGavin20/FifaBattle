@@ -20,7 +20,7 @@ struct ContentView: View {
         NavigationView {
             ZStack{
                 //Links to other pages
-                //NavigationLink(destination: TableView(), isActive: $isLoggedIn, label:{ EmptyView() })
+                NavigationLink(destination: CustomTabView(), isActive: $isLoggedIn, label:{ EmptyView() })
                 //Background Color
                 Color.green
                     .ignoresSafeArea() 

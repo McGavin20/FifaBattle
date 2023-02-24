@@ -54,7 +54,6 @@ struct IncrementNumberButton: View {
             }
             .navigationTitle("Score:")
         }
-        
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
     }

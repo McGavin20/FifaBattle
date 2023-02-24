@@ -73,18 +73,18 @@ struct ProfileFormView: View {
                 
             }
             .environment(\.colorScheme, .dark)
-            .navigationViewStyle(StackNavigationViewStyle())
-            .background(
-                NavigationLink(
-                    destination: ProfileView(profile: Profile(name: name, username: username, favoriteTeam: favoriteTeam, favoritePlayer: favoritePlayer, profileImage: profileImage)),
-                    isActive: Binding<Bool>(
-                        get: { self.profileImage != nil },
-                        set: { if !$0 { self.profileImage = nil } }
-                    )
-                ) {
-                    EmptyView()
-                }
-            )
+//            .navigationViewStyle(StackNavigationViewStyle())
+//            .background(
+//                NavigationLink(
+//                    destination: ProfileView()),
+//                    isActive: Binding<Bool>(
+//                        get: { self.profileImage != nil },
+//                        set: { if !$0 { self.profileImage = nil } }
+//                    )
+//                ) {
+//                    EmptyView()
+//                }
+//            )
 
         }
     }
