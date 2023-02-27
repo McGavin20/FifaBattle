@@ -19,6 +19,8 @@
 		2FB4CC2129A90F4E0066AE72 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC2029A90F4E0066AE72 /* CreditsView.swift */; };
 		2FB4CC2429A912A50066AE72 /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC2329A912A50066AE72 /* CenterModifier.swift */; };
 		2FB4CC2629AB850B0066AE72 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC2529AB850B0066AE72 /* Color.swift */; };
+		2FB4CC3829AD05CA0066AE72 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC3729AD05CA0066AE72 /* FontsManager.swift */; };
+		2FB4CC3A29AD09D40066AE72 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2FB4CC3929AD09D40066AE72 /* OFL.txt */; };
 		2FBF0AE629A4E11E00C7CB82 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF0AE529A4E11E00C7CB82 /* CustomTabView.swift */; };
 		4E766E315262C35328A31ADB /* Pods_FifaBattle_FifaBattleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6726B0EB91A6F9E9DC60BC73 /* Pods_FifaBattle_FifaBattleUITests.framework */; };
 		8B8BCC1333FF2CB22470A30D /* Pods_FifaBattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */; };
@@ -65,6 +67,12 @@
 		2FB4CC2029A90F4E0066AE72 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		2FB4CC2329A912A50066AE72 /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
 		2FB4CC2529AB850B0066AE72 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2FB4CC3329AD04CF0066AE72 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
+		2FB4CC3429AD04CF0066AE72 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		2FB4CC3529AD04CF0066AE72 /* RampartOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RampartOne-Regular.ttf"; sourceTree = "<group>"; };
+		2FB4CC3629AD04CF0066AE72 /* RubikIso-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RubikIso-Regular.ttf"; sourceTree = "<group>"; };
+		2FB4CC3729AD05CA0066AE72 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
+		2FB4CC3929AD09D40066AE72 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		2FBF0AE529A4E11E00C7CB82 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		3BC757F95454A6D76AA312B2 /* Pods-FifaBattle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle.debug.xcconfig"; path = "Target Support Files/Pods-FifaBattle/Pods-FifaBattle.debug.xcconfig"; sourceTree = "<group>"; };
 		3D5D8E7CC396BDDFC92FEB2C /* Pods_FifaBattle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaBattle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +145,19 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		2FB4CC3229AD04BB0066AE72 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2FB4CC3329AD04CF0066AE72 /* PressStart2P-Regular.ttf */,
+				2FB4CC3529AD04CF0066AE72 /* RampartOne-Regular.ttf */,
+				2FB4CC3929AD09D40066AE72 /* OFL.txt */,
+				2FB4CC3429AD04CF0066AE72 /* Roboto-Regular.ttf */,
+				2FB4CC3629AD04CF0066AE72 /* RubikIso-Regular.ttf */,
+				2FB4CC3729AD05CA0066AE72 /* FontsManager.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		BAD62712298A8106009BE115 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +183,7 @@
 		BAD6271D298A8106009BE115 /* FifaBattle */ = {
 			isa = PBXGroup;
 			children = (
+				2FB4CC3229AD04BB0066AE72 /* Fonts */,
 				2FB4CC2229A9126F0066AE72 /* Modifiers */,
 				2F4EBE922995143C00D53080 /* ViewModel */,
 				BAF3EE6C298C3F0D0047A7E0 /* dashboard */,
@@ -360,6 +382,7 @@
 			files = (
 				BAD62726298A8109009BE115 /* Preview Assets.xcassets in Resources */,
 				BAD62752298AB115009BE115 /* GoogleService-Info.plist in Resources */,
+				2FB4CC3A29AD09D40066AE72 /* OFL.txt in Resources */,
 				BAD62723298A8109009BE115 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +517,7 @@
 				2FB4CC2129A90F4E0066AE72 /* CreditsView.swift in Sources */,
 				2FB4CC2629AB850B0066AE72 /* Color.swift in Sources */,
 				2F4A67DE299E697800D18366 /* ImagePicker.swift in Sources */,
+				2FB4CC3829AD05CA0066AE72 /* FontsManager.swift in Sources */,
 				BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */,
 				2F4A67D8299E5E3E00D18366 /* ProfileView.swift in Sources */,
 				2F4EBE902995129400D53080 /* TableView.swift in Sources */,
