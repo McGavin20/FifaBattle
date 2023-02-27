@@ -16,48 +16,68 @@ struct IncrementNumberButton: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.green
-                    .ignoresSafeArea()
-                Circle()
-                    .scale(1.7)
-                    .foregroundColor(.black.opacity(0.15))
-                Circle()
-                    .scale(1.35)
-                    .foregroundColor(.black)
-                VStack {
-                    HStack {
-                        Text("Player Goals: \(score.playerGoals)")
-                            .foregroundColor(.gray)
-                        Stepper("", value: $score.playerGoals, in: 0...20)
-                            .foregroundColor(.gray)
-                    }
-                    .padding()
-                    HStack {
-                        Text("Opponent Goals: \(score.opponentGoals)")
-                            .foregroundColor(.gray)
-                        Stepper("", value: $score.opponentGoals, in: 0...20)
-                            .foregroundColor(.gray)
-                    }
-                    .padding()
-                    NavigationLink(destination: TableView()) {
-                        Text("Confirm")
-                            .font(.title)
-                            .frame(width: 180, height: 50)
-                            .background(Color.green)
-                            .opacity(0.8)
-                            .cornerRadius(12)
-                            .foregroundColor(.black)
-                            .bold()
+                
+                Color(.black)
+                    .edgesIgnoringSafeArea(.all)
+                ZStack {
+                    //Neumorphism Frame
+                    Color(.black)
+                        .frame(width: 380, height: 460, alignment: .center)
+                        .cornerRadius(20)
+                        .shadow(color: .theme.primaryColor.opacity(0.3), radius: 8, x: -8, y: -8)
+                        .shadow(color: .theme.primaryColor.opacity(0.3), radius: 8, x: 8, y: 8)
+                    VStack {
+                        Image("sign-in-logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 180, height: 180)
+                            .foregroundColor(.theme.primaryColor)
+                            .offset(y: -20)
+                        
+                        
+                        VStack {
+                            HStack {
+                                Text("Player Goals: \(score.playerGoals)")
+                                    .foregroundColor(.theme.darkGray)
+                                Stepper("", value: $score.playerGoals, in: 0...20)
+                                    .foregroundColor(.theme.primaryColor)
+                            }
+                            .padding()
+                            HStack {
+                                Text("Opponent Goals: \(score.opponentGoals)")
+                                    .foregroundColor(.theme.darkGray)
+                                Stepper("", value: $score.opponentGoals, in: 0...20)
+                                    .foregroundColor(.theme.whiteGray)
+                            }
+                            .padding()
+                        }
+                        .offset(y: -20)
+                        
+                        Button(action: {
+                            //Send results to database and update the Tableview points
+                            print("⚽️Results recorded!")
+                        }) {
+                            Capsule()
+                                .fill(Color.theme.background)
+                                .frame(width: 200, height: 50)
+                                .overlay(
+                                    Text("Press me")
+                                        .foregroundColor(.theme.primaryColor)
+                                )
+                        }
                     }
                 }
-                .ignoresSafeArea()
             }
+            .ignoresSafeArea()
             .navigationTitle("Score:")
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
     }
+        
 }
+    
+
 
 
 

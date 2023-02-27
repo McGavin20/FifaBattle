@@ -45,7 +45,7 @@ struct TableView: View {
                                 .frame(maxWidth: .infinity)
                                 .foregroundColor(.theme.primaryColor)
                                 .font(.headline)
-                            Text("Score")
+                            Text("Goals")
                                 .frame(maxWidth: .infinity)
                                 .foregroundColor(.theme.primaryColor)
                                 .font(.headline)

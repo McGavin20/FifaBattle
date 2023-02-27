@@ -18,5 +18,5 @@ struct ColorTheme {
     let primaryColor = Color("primary")
     let background = Color("secondary")
     let whiteGray = Color("whiteGray")
-    let offWhite = Color("offWhite")
+    let offWhite = Color("offwhite")
 }

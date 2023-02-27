@@ -17,73 +17,87 @@ struct SettingsView: View {
     @State private var profileImage: UIImage?
     @State private var profile: Profile?
     @State private var isShowingImagePicker = false
+    @State private var selectedCountryIndex = 0
+    let countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"]
     
     
     
     var body: some View {
         NavigationView {
             ZStack {
-                Form {
-                    Section(header: Text("Personal Information")) {
-                        TextField("Name", text: $name)
-                        TextField("Username", text: $username)
-                        DatePicker("Date of Birth", selection: $birthdate, displayedComponents: .date)
+                Color.black
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    HStack{
                         
-                    }
-                    .foregroundColor(.theme.primaryColor)
-                    
-                    Section(header: Text("Football Information")) {
-                        TextField("Favorite Team", text: $favoriteTeam)
-                        TextField("Favorite Player", text: $favoritePlayer)
-                    }
-                    .foregroundColor(.theme.primaryColor)
-                    
-                    Section(header: Text("Profile Picture")) {
-                        if profileImage != nil {
-                            Button(action: { self.isShowingImagePicker = true }) {
-                                Image(uiImage: profileImage!)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            }
-                        } else {
-                            Button(action: { self.isShowingImagePicker = true }) {
-                                Text("Choose Photo")
-                            }
+                        Button(action: {
+                            //Saved Info
+                            presentationMode.wrappedValue.dismiss()
+                            print("Settings dismissed")
+                            
+                        }) {
+                            Text("Cancel")
+                                .foregroundColor(.theme.primaryColor)
+                        }
+                        
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            //Saved Info
+                            print("Settings saved")
+                        }) {
+                            Text("Save")
+                                .foregroundColor(.theme.primaryColor)
                         }
                     }
-                    
-                }
-                
-                .foregroundColor(.theme.primaryColor)
-                .navigationBarItems(
-                    leading: Button("Cancel") {
-                        // Handle cancel action
-                        
-                    }.foregroundColor(.theme.lightGray),
-                    trailing: Button("Save") {
-                        // Save profile information and dismiss form
-                        self.profile = Profile(
-                            name: name,
-                            username: username,
-                            favoriteTeam: favoriteTeam,
-                            favoritePlayer: favoritePlayer,
-                            profileImage: profileImage
-                        )
-                        saveProfile(self.profile!)
-                        presentationMode.wrappedValue.dismiss()
+                    Form {
+                        Section(header: Text("Personal Information")) {
+                            TextField("Name", text: $name)
+                            TextField("Username", text: $username)
+                            Picker("Select your country", selection: $selectedCountryIndex) {
+                                ForEach(0..<countries.count) { index in
+                                    Text(countries[index]).tag(index)
+                                }
+                            }
+                            DatePicker("Date of Birth", selection: $birthdate, displayedComponents: .date)
+                                .foregroundColor(.theme.primaryColor)
+                            
+                            Spacer()
+                            
+                            Section(header: Text("Football Information")) {
+                                TextField("Favorite Team", text: $favoriteTeam)
+                                TextField("Favorite Player", text: $favoritePlayer)
+                            }
+                            .foregroundColor(.theme.primaryColor)
+                            
+                            Spacer()
+                            
+                            Section(header: Text("Profile")) {
+                                TextField("Write about yourself", text: .constant(""))
+                            }
+                        }
+                        .foregroundColor(.theme.primaryColor)
                     }
-                        .foregroundColor(.theme.lightGray)
-                )
-                .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage) {
-                    ImagePicker(image: self.$profileImage)
+                    
+                    
                 }
                 
             }
-            .navigationBarTitle("Settings")
+            //.navigationBarTitle("Settings")
             .environment(\.colorScheme, .dark)
+            
         }
         
     }
+    struct Profile {
+        var name: String
+        var username: String
+        var favoriteTeam: String
+        var favoritePlayer: String
+        var profileImage: UIImage?
+    }
+    
     func saveProfile(_ profile: Profile) {
         // Call a function to save the profile information to app's data store or service
         print("Profile sent to Database✅")
@@ -105,13 +119,7 @@ struct SettingsView: View {
         }
     }
     
-    struct Profile {
-        var name: String
-        var username: String
-        var favoriteTeam: String
-        var favoritePlayer: String
-        var profileImage: UIImage?
-    }
+    
     
     
     struct ProfileFormView_Previews: PreviewProvider {
@@ -120,3 +128,4 @@ struct SettingsView: View {
         }
     }
 }
+

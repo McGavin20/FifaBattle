@@ -64,7 +64,7 @@ struct SignUpView: View {
                         }
                         .padding()
                         .foregroundColor(.white)
-                        .background(Color.green)
+                        .background(Color.theme.primaryColor)
                         .cornerRadius(16)
                         
                     }

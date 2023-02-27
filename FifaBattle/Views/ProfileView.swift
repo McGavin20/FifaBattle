@@ -7,118 +7,107 @@
 
 import SwiftUI
 
-
-
 struct ProfileView: View {
+    
+    @StateObject private var viewModel: HomeViewModel = .init()
+    @AppStorage("isLogged") var isLoggedIn: Bool = true
+    
     var body : some View{
-        
-        ZStack{
+        NavigationView {
             
-            Image("profile-photo").resizable().edgesIgnoringSafeArea(.all)
-            
-            VStack{
+            ZStack{
                 
-                HStack{
-                    
-                    Button(action: {
-                        
-                    }) {
-                        
-                        Image("menu").renderingMode(.original).resizable().frame(width: 20, height: 20)
-                    }
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        
-                    }) {
-                        
-                        Image("close").renderingMode(.original).resizable().frame(width: 20, height: 20)
-                    }
-                }
+                Color.black
+                    .edgesIgnoringSafeArea(.all)
+                Image("sign-in-logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 180, height: 180)
+                    .foregroundColor(.theme.primaryColor)
+                    .offset(y: -150)
                 
-                Spacer()
-                
-                ZStack(alignment: .top) {
-                    
-                    VStack{
-                        
-                        HStack{
-                            
-                            VStack(alignment: .leading, spacing: 10) {
-                                
-                                Text("Andro").font(.title).bold()
-                                Text("25")
-                            }
-                            
-                            Spacer()
-                            
-                            HStack(spacing: 8){
-                                
-                                Image("location").resizable().frame(width: 15, height: 20)
-                                
-                                Text("USA")
-                                
-                            }.padding(8)
-                                .background(Color.black.opacity(0.1))
-                                .cornerRadius(10)
-                        }.padding(.top,35)
-                        
-                        Text("Hi! My name is Bella. I live in Mbare. I love gaming and music. I like sharing my earned trophies. I see the world in different a way and I'm always positive.").padding(.top)
-                        
-                    }.padding()
-                        .background(Blurview())
-                        .clipShape(BottomShape())
-                        .cornerRadius(25)
-                        .offset(y: -67)
-                    
-                    ZStack{
-                        
-                        Button(action: {
-                            
-                        }) {
-                            
-                            Image("add").renderingMode(.original).resizable()
-                                .frame(width: 20, height: 20)
-                                .padding(20)
-                                .background(Color.white)
-                                .clipShape(Circle())
-                        }
-                        
-                        Circle().stroke(Color.orange, lineWidth: 5).frame(width: 70, height: 70)
-                        
-                    }.offset(y: -92)
+                VStack{
                     
                     HStack{
                         
-                        Button(action: {
-                            
-                        }) {
-                            
-                            Image("heart").renderingMode(.original).resizable()
-                                .frame(width: 25, height: 20)
-                                .padding()
-                                .background(Color.white)
-                                .clipShape(Circle())
+                        NavigationLink(destination: SettingsView()) {
+                            Text("Edit")
+                                .foregroundColor(.theme.primaryColor)
                         }
+                        
                         
                         Spacer()
                         
                         Button(action: {
-                            
+                            signOut()
                         }) {
-                            
-                            Image("sunglasses").renderingMode(.original).resizable()
-                                .frame(width: 25, height: 25)
-                                .padding()
-                                .background(Color.white)
-                                .clipShape(Circle())
+                            Text("Log Out")
+                                .foregroundColor(.theme.primaryColor)
                         }
-                    }.offset(y: -92)
-                        .padding(.horizontal,35)
-                }
-                
-            }.padding()
+                    }
+                    
+                    Spacer()
+                    
+                    ZStack(alignment: .top) {
+                        
+                        VStack{
+                            
+                            HStack{
+                                
+                                VStack(alignment: .leading, spacing: 10) {
+                                    
+                                    Text("Andro").font(.title).bold().foregroundColor(.theme.primaryColor)
+                                    
+                                    Text("25").foregroundColor(.theme.darkGray)
+                                }
+                                
+                                Spacer()
+                                
+                                HStack(spacing: 8){
+                                    
+                                    Image("location").resizable().frame(width: 15, height: 20)
+                                    
+                                    Text("USA").foregroundColor(.theme.darkGray)
+                                    
+                                }.padding(8)
+                                    .background(Color.black.opacity(0.1))
+                                    .cornerRadius(10)
+                            }.padding(.top,35)
+                            
+                            Text("Hi! My name is Bella. I live in Mbare. I love gaming and music. I like sharing my earned trophies. I see the world in different a way and I'm always positive.").padding(.top).foregroundColor(.theme.darkGray)
+                            
+                        }.padding()
+                            .background(Blurview())
+                            .clipShape(BottomShape())
+                            .cornerRadius(25)
+                            .offset(y: -67)
+                        
+                        ZStack{
+                            
+                            NavigationLink(destination: IncrementNumberButton()) {
+                                Image("controller").renderingMode(.original).resizable()
+                                    .frame(width: 40, height: 40)
+                                    .padding(20)
+                                    .background(Color.theme.lightGray)
+                                    .clipShape(Circle())
+                            }
+                            
+                            Circle().stroke(Color.theme.darkGray, lineWidth: 5).frame(width: 70, height: 70)
+                            
+                        }.offset(y: -100)
+                            .padding(.horizontal,35)
+                    }
+                    
+                }.padding()
+            }
+        }
+    }
+    private func signOut() {
+        do {
+            try viewModel.signOut()
+            isLoggedIn.toggle()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
         }
     }
 }
