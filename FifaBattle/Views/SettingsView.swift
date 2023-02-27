@@ -73,7 +73,7 @@ struct SettingsView: View {
                             
                             Spacer()
                             
-                            Section(header: Text("Profile")) {
+                            Section(header: Text("Bio")) {
                                 TextField("Write about yourself", text: .constant(""))
                             }
                         }

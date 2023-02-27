@@ -40,6 +40,10 @@ struct TableView: View {
             NavigationView {
                 ScrollView {
                     VStack {
+                        Text("Fifa Battle Table")
+                            .font(.title).bold()
+                            .foregroundColor(.theme.lightGray)
+                            .offset(y: -6)
                         HStack {
                             Text("Name")
                                 .frame(maxWidth: .infinity)
@@ -73,16 +77,12 @@ struct TableView: View {
                     }
                     
                 }
-                .navigationTitle("Fifa Battle Table")
                 .offset(y: -29)
                 .fixedSize(horizontal: false, vertical: true)
                 
                 
                 
             }
-            
-            //            .toolbarBackground(Color.green, for: .navigationBar)
-            //            .toolbarBackground(.visible, for: .navigationBar)
             .navigationBarBackButtonHidden(true)
             
             
