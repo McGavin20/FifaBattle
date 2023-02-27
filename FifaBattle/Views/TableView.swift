@@ -41,7 +41,7 @@ struct TableView: View {
                 ScrollView {
                     VStack {
                         Text("Fifa Battle Table")
-                            .font(.custom(FontsManager.Fonts.gameFont2, size:  17))
+                            .font(.custom(FontsManager.Fonts.gameFont2, size:  17)).bold()
                             .foregroundColor(.theme.lightGray)
                             //.offset(y: -6)
                         HStack {

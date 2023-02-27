@@ -69,7 +69,7 @@ struct IncrementNumberButton: View {
                 }
             }
             .ignoresSafeArea()
-            .navigationTitle("Score:")
+            //.navigationTitle("Score:")
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)

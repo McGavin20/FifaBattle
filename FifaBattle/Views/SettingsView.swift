@@ -51,35 +51,36 @@ struct SettingsView: View {
                                 .foregroundColor(.theme.primaryColor)
                         }
                     }
-                    Form {
-                        Section(header: Text("Personal Information")) {
-                            TextField("Name", text: $name)
-                            TextField("Username", text: $username)
-                            Picker("Select your country", selection: $selectedCountryIndex) {
-                                ForEach(0..<countries.count) { index in
-                                    Text(countries[index]).tag(index)
+                    
+                        Form {
+                            Section(header: Text("Personal Information")) {
+                                TextField("Name", text: $name)
+                                TextField("Username", text: $username)
+                                Picker("Select your country", selection: $selectedCountryIndex) {
+                                    ForEach(0..<countries.count) { index in
+                                        Text(countries[index]).tag(index)
+                                    }
+                                }
+                                DatePicker("Date of Birth", selection: $birthdate, displayedComponents: .date)
+                                    .foregroundColor(.theme.primaryColor)
+                                
+                                Spacer()
+                                
+                                Section(header: Text("Football Information")) {
+                                    TextField("Favorite Team", text: $favoriteTeam)
+                                    TextField("Favorite Player", text: $favoritePlayer)
+                                }
+                                .foregroundColor(.theme.primaryColor)
+                                
+                                Spacer()
+                                
+                                Section(header: Text("Bio")) {
+                                    TextField("Write about yourself", text: .constant(""))
                                 }
                             }
-                            DatePicker("Date of Birth", selection: $birthdate, displayedComponents: .date)
-                                .foregroundColor(.theme.primaryColor)
-                            
-                            Spacer()
-                            
-                            Section(header: Text("Football Information")) {
-                                TextField("Favorite Team", text: $favoriteTeam)
-                                TextField("Favorite Player", text: $favoritePlayer)
-                            }
                             .foregroundColor(.theme.primaryColor)
-                            
-                            Spacer()
-                            
-                            Section(header: Text("Bio")) {
-                                TextField("Write about yourself", text: .constant(""))
-                            }
                         }
-                        .foregroundColor(.theme.primaryColor)
-                    }
-                    
+                        
                     
                 }
                 
