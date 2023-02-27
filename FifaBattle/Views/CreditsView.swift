@@ -9,20 +9,20 @@ import SwiftUI
 
 struct CreditsView: View {
   var body: some View {
-    VStack {
+      VStack {
       Image("logo")
         .resizable()
         .scaledToFit()
         .frame(width: 128, height: 128)
-      
       Text("""
   Copyright © Sharma Muridzo
   All right reserved
-  Better Apps ♡ Less Code
+  ♡ The distance between reality & your dream
+  may be just a few hundred lines of code. ♡
   """)
         .font(.footnote)
         .multilineTextAlignment(.center)
-        .foregroundColor(.gray)
+        .foregroundColor(.theme.whiteGray)
     } //: VSTACK
     .padding()
     //.opacity(0.4)

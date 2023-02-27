@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct ProfileFormView: View {
+struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var name: String = ""
     @State private var username: String = ""
+    @State private var birthdate = Date()
     @State private var favoriteTeam: String = ""
     @State private var favoritePlayer: String = ""
     @State private var profileImage: UIImage?
@@ -26,33 +27,39 @@ struct ProfileFormView: View {
                     Section(header: Text("Personal Information")) {
                         TextField("Name", text: $name)
                         TextField("Username", text: $username)
+                        DatePicker("Date of Birth", selection: $birthdate, displayedComponents: .date)
+                        
                     }
-                    .foregroundColor(.green)
+                    .foregroundColor(.theme.primaryColor)
                     
                     Section(header: Text("Football Information")) {
                         TextField("Favorite Team", text: $favoriteTeam)
                         TextField("Favorite Player", text: $favoritePlayer)
                     }
-                    .foregroundColor(.green)
+                    .foregroundColor(.theme.primaryColor)
                     
                     Section(header: Text("Profile Picture")) {
-                        Button(action: { self.isShowingImagePicker = true }) {
-                            Text("Choose Photo")
-                        }
-                        .foregroundColor(.green)
-                        if let profileImage = profileImage {
-                            Image(uiImage: profileImage)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+                        if profileImage != nil {
+                            Button(action: { self.isShowingImagePicker = true }) {
+                                Image(uiImage: profileImage!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
+                        } else {
+                            Button(action: { self.isShowingImagePicker = true }) {
+                                Text("Choose Photo")
+                            }
                         }
                     }
+                    
                 }
-                .navigationBarTitle("Profile Form")
-                .foregroundColor(.green)
+                
+                .foregroundColor(.theme.primaryColor)
                 .navigationBarItems(
                     leading: Button("Cancel") {
                         // Handle cancel action
-                    },
+                        
+                    }.foregroundColor(.theme.lightGray),
                     trailing: Button("Save") {
                         // Save profile information and dismiss form
                         self.profile = Profile(
@@ -62,58 +69,54 @@ struct ProfileFormView: View {
                             favoritePlayer: favoritePlayer,
                             profileImage: profileImage
                         )
-                        // Call a function to save the profile information to your app's data store or service
-                        
+                        saveProfile(self.profile!)
                         presentationMode.wrappedValue.dismiss()
                     }
+                        .foregroundColor(.theme.lightGray)
                 )
                 .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage) {
                     ImagePicker(image: self.$profileImage)
                 }
                 
             }
+            .navigationBarTitle("Settings")
             .environment(\.colorScheme, .dark)
-//            .navigationViewStyle(StackNavigationViewStyle())
-//            .background(
-//                NavigationLink(
-//                    destination: ProfileView()),
-//                    isActive: Binding<Bool>(
-//                        get: { self.profileImage != nil },
-//                        set: { if !$0 { self.profileImage = nil } }
-//                    )
-//                ) {
-//                    EmptyView()
-//                }
-//            )
-
         }
+        
+    }
+    func saveProfile(_ profile: Profile) {
+        // Call a function to save the profile information to app's data store or service
+        print("Profile sent to Database✅")
     }
     
     func loadImage() {
         guard let profileImage = profileImage else { return }
-        let imageData = profileImage.jpegData(compressionQuality: 0.5)
-        // Handle the loaded image data, e.g., display the image preview in the form view
-        self.profile = Profile(
-            name: name,
-            username: username,
-            favoriteTeam: favoriteTeam,
-            favoritePlayer: favoritePlayer,
-            profileImage: profileImage
-        )
+        guard let imageData = profileImage.jpegData(compressionQuality: 0.5) else {
+            print("Error: could not convert image to JPEG data")
+            return
+            // Handle the loaded image data, e.g., display the image preview in the form view
+            self.profile = Profile(
+                name: name,
+                username: username,
+                favoriteTeam: favoriteTeam,
+                favoritePlayer: favoritePlayer,
+                profileImage: UIImage()
+            )
+        }
     }
-}
-
-struct Profile {
-    var name: String
-    var username: String
-    var favoriteTeam: String
-    var favoritePlayer: String
-    var profileImage: UIImage?
-}
-
-
-struct ProfileFormView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileFormView()
+    
+    struct Profile {
+        var name: String
+        var username: String
+        var favoriteTeam: String
+        var favoritePlayer: String
+        var profileImage: UIImage?
+    }
+    
+    
+    struct ProfileFormView_Previews: PreviewProvider {
+        static var previews: some View {
+            SettingsView()
+        }
     }
 }

@@ -43,15 +43,15 @@ struct TableView: View {
                         HStack {
                             Text("Name")
                                 .frame(maxWidth: .infinity)
-                                .foregroundColor(.green)
+                                .foregroundColor(.theme.primaryColor)
                                 .font(.headline)
                             Text("Score")
                                 .frame(maxWidth: .infinity)
-                                .foregroundColor(.green)
+                                .foregroundColor(.theme.primaryColor)
                                 .font(.headline)
                             Text("Points")
                                 .frame(maxWidth: .infinity)
-                                .foregroundColor(.green)
+                                .foregroundColor(.theme.primaryColor)
                                 .font(.headline)
                         }
                         ForEach(players) { player in
@@ -65,7 +65,7 @@ struct TableView: View {
                                         .frame(maxWidth: .infinity)
                                 }
                             }
-                            .foregroundColor(.gray)
+                            .foregroundColor(.theme.lightGray)
                             .frame(width: 350, height: 100)
                         }
                         CreditsView()
@@ -74,7 +74,7 @@ struct TableView: View {
                     
                 }
                 .navigationTitle("Fifa Battle Table")
-                .offset(y: -20)
+                .offset(y: -29)
                 .fixedSize(horizontal: false, vertical: true)
                 
                 

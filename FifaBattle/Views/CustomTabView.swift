@@ -30,16 +30,7 @@ struct CustomTabView: View {
                         ProfileView()
                     }
                     else{
-                        GeometryReader{_ in
-                            VStack(spacing: 15){
-                                Spacer()
-                                Text("Settings")
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                Image("4").resizable().frame(height: 250).cornerRadius(15)
-                                Spacer()
-                            }.padding()
-                        }
+                        SettingsView()
                     }
                     
                 }
@@ -75,14 +66,14 @@ struct FloatingTabbar : View {
                     Button(action: {
                         self.expand.toggle()
                     }) {
-                        Image(systemName: "arrow.left").foregroundColor(.green).padding()
+                        Image(systemName: "arrow.left").foregroundColor(.theme.primaryColor).padding()
                     }
                 }
                 else{
                     Button(action: {
                         self.selected = 0
                     }) {
-                        Image(systemName: "house").foregroundColor(self.selected == 0 ? .green : .gray).padding(.horizontal)
+                        Image(systemName: "house").foregroundColor(self.selected == 0 ? .theme.primaryColor : .theme.darkGray).padding(.horizontal)
                     }
                     
                     Spacer(minLength: 15)
@@ -90,7 +81,7 @@ struct FloatingTabbar : View {
                     Button(action: {
                         self.selected = 1
                     }) {
-                        Image(systemName: "sportscourt").foregroundColor(self.selected == 1 ? .green : .gray).padding(.horizontal)
+                        Image(systemName: "sportscourt").foregroundColor(self.selected == 1 ? .theme.primaryColor : .theme.darkGray).padding(.horizontal)
                     }
                     
                     Spacer(minLength: 15)
@@ -98,14 +89,14 @@ struct FloatingTabbar : View {
                     Button(action: {
                         self.selected = 2
                     }) {
-                        Image(systemName: "person").foregroundColor(self.selected == 2 ? .green : .gray).padding(.horizontal)
+                        Image(systemName: "person").foregroundColor(self.selected == 2 ? .theme.primaryColor : .theme.darkGray).padding(.horizontal)
                     }
                     Spacer(minLength: 15)
                     
                     Button(action: {
                         self.selected = 3
                     }) {
-                        Image(systemName: "gearshape").foregroundColor(self.selected == 3 ? .green : .gray).padding(.horizontal)
+                        Image(systemName: "gearshape").foregroundColor(self.selected == 3 ? .theme.primaryColor : .theme.darkGray).padding(.horizontal)
                     }
                 }
             }.padding(.vertical,self.expand ? 20 : 8)
