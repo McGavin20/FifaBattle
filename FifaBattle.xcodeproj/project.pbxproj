@@ -16,6 +16,9 @@
 		2F4A67DA299E655400D18366 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A67D9299E655400D18366 /* SettingsView.swift */; };
 		2F4A67DE299E697800D18366 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A67DD299E697800D18366 /* ImagePicker.swift */; };
 		2F4EBE902995129400D53080 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4EBE8F2995129400D53080 /* TableView.swift */; };
+		2F697D2F29B600E200A0C801 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F697D2E29B600E200A0C801 /* DataModel.swift */; };
+		2F697D3229B60A9500A0C801 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F697D3129B60A9500A0C801 /* TableModel.swift */; };
+		2F697D3D29B62B9F00A0C801 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F697D3C29B62B9F00A0C801 /* GoogleService-Info.plist */; };
 		2FB4CC2129A90F4E0066AE72 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC2029A90F4E0066AE72 /* CreditsView.swift */; };
 		2FB4CC2429A912A50066AE72 /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC2329A912A50066AE72 /* CenterModifier.swift */; };
 		2FB4CC2629AB850B0066AE72 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4CC2529AB850B0066AE72 /* Color.swift */; };
@@ -33,7 +36,6 @@
 		BAD6273C298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6273B298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift */; };
 		BAD6274C298A8181009BE115 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6274B298A8181009BE115 /* ResetPasswordView.swift */; };
 		BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6274F298A81B8009BE115 /* SignUpView.swift */; };
-		BAD62752298AB115009BE115 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAD62751298AB115009BE115 /* GoogleService-Info.plist */; };
 		BAF3EE6E298C3F480047A7E0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF3EE6D298C3F480047A7E0 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,9 @@
 		2F4A67D9299E655400D18366 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2F4A67DD299E697800D18366 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2F4EBE8F2995129400D53080 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		2F697D2E29B600E200A0C801 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		2F697D3129B60A9500A0C801 /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		2F697D3C29B62B9F00A0C801 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FB4CC2029A90F4E0066AE72 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		2FB4CC2329A912A50066AE72 /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
 		2FB4CC2529AB850B0066AE72 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -93,7 +98,6 @@
 		BAD6273B298A810A009BE115 /* FifaBattleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifaBattleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BAD6274B298A8181009BE115 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		BAD6274F298A81B8009BE115 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		BAD62751298AB115009BE115 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAE86496298BC9E300C5916A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BAF3EE6D298C3F480047A7E0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DAF2F77B3DFEE4C4BD1F0861 /* Pods-FifaBattle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaBattle.release.xcconfig"; path = "Target Support Files/Pods-FifaBattle/Pods-FifaBattle.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,8 +136,16 @@
 			children = (
 				2F4A67D1299D145200D18366 /* CalculatePointsViewModel.swift */,
 				2F4A67DD299E697800D18366 /* ImagePicker.swift */,
+				2F697D3129B60A9500A0C801 /* TableModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F697D3029B6060F00A0C801 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		2FB4CC2229A9126F0066AE72 /* Modifiers */ = {
@@ -156,6 +168,14 @@
 				2FB4CC3729AD05CA0066AE72 /* FontsManager.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2FFF525B29AE375500FB4F66 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F697D2E29B600E200A0C801 /* DataModel.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		BAD62712298A8106009BE115 = {
@@ -183,6 +203,8 @@
 		BAD6271D298A8106009BE115 /* FifaBattle */ = {
 			isa = PBXGroup;
 			children = (
+				2F697D3029B6060F00A0C801 /* New Group */,
+				2FFF525B29AE375500FB4F66 /* DataModel */,
 				2FB4CC3229AD04BB0066AE72 /* Fonts */,
 				2FB4CC2229A9126F0066AE72 /* Modifiers */,
 				2F4EBE922995143C00D53080 /* ViewModel */,
@@ -191,7 +213,7 @@
 				BAD62748298A8149009BE115 /* Views */,
 				BAD6271E298A8106009BE115 /* FifaBattleApp.swift */,
 				BAD62720298A8106009BE115 /* ContentView.swift */,
-				BAD62751298AB115009BE115 /* GoogleService-Info.plist */,
+				2F697D3C29B62B9F00A0C801 /* GoogleService-Info.plist */,
 				BAD62722298A8109009BE115 /* Assets.xcassets */,
 				BAD62724298A8109009BE115 /* Preview Content */,
 			);
@@ -289,6 +311,8 @@
 			dependencies = (
 			);
 			name = FifaBattle;
+			packageProductDependencies = (
+			);
 			productName = FifaBattle;
 			productReference = BAD6271B298A8106009BE115 /* FifaBattle.app */;
 			productType = "com.apple.product-type.application";
@@ -364,6 +388,8 @@
 				Base,
 			);
 			mainGroup = BAD62712298A8106009BE115;
+			packageReferences = (
+			);
 			productRefGroup = BAD6271C298A8106009BE115 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -381,7 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD62726298A8109009BE115 /* Preview Assets.xcassets in Resources */,
-				BAD62752298AB115009BE115 /* GoogleService-Info.plist in Resources */,
+				2F697D3D29B62B9F00A0C801 /* GoogleService-Info.plist in Resources */,
 				2FB4CC3A29AD09D40066AE72 /* OFL.txt in Resources */,
 				BAD62723298A8109009BE115 /* Assets.xcassets in Resources */,
 			);
@@ -515,7 +541,9 @@
 				BAF3EE6E298C3F480047A7E0 /* HomeViewModel.swift in Sources */,
 				2F4A67D6299D1D8000D18366 /* IncrementNumberButton.swift in Sources */,
 				2FB4CC2129A90F4E0066AE72 /* CreditsView.swift in Sources */,
+				2F697D3229B60A9500A0C801 /* TableModel.swift in Sources */,
 				2FB4CC2629AB850B0066AE72 /* Color.swift in Sources */,
+				2F697D2F29B600E200A0C801 /* DataModel.swift in Sources */,
 				2F4A67DE299E697800D18366 /* ImagePicker.swift in Sources */,
 				2FB4CC3829AD05CA0066AE72 /* FontsManager.swift in Sources */,
 				BAD62750298A81B8009BE115 /* SignUpView.swift in Sources */,

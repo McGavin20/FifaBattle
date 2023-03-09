@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Firebase
 
 struct Player: Identifiable {
     var id = UUID()
@@ -27,6 +28,7 @@ struct DetailView: View {
 struct TableView: View {
     @State private var navigateToNextScreen = false
     @StateObject private var viewModel: HomeViewModel = .init()
+    //@ObservedObject var model = TableModel()
     @AppStorage("isLogged") var isLoggedIn: Bool = true
     
     
@@ -41,7 +43,8 @@ struct TableView: View {
                 ScrollView {
                     VStack {
                         Text("Fifa Battle Table")
-                            .font(.custom(FontsManager.Fonts.gameFont2, size:  17)).bold()
+                            .font(.custom(FontsManager.Fonts.gameFont2, size:  20))
+                            .bold()
                             .foregroundColor(.theme.lightGray)
                             //.offset(y: -6)
                         HStack {
@@ -75,7 +78,9 @@ struct TableView: View {
                         CreditsView()
                             .modifier(CenterModifier())
                     }
-                    
+//                    init() {
+//                        model.getData()
+//                    }
                 }
                 .offset(y: -18)
                 .fixedSize(horizontal: false, vertical: true)

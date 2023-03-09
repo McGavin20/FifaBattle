@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+
+
 class Scores: ObservableObject {
     @Published var playerGoals = 0
     @Published var opponentGoals = 0
 }
+
 struct IncrementNumberButton: View {
     @StateObject var score = Scores()
+    //@ObservedObject var model = TableModel()
     
     var body: some View {
         NavigationView {
@@ -55,6 +59,9 @@ struct IncrementNumberButton: View {
                         
                         Button(action: {
                             //Send results to database and update the Tableview points
+                            //model.addData(playerGoals: score.playerGoals, opponentGoals: score.opponentGoals)
+                            score.opponentGoals = 0
+                            score.playerGoals = 0
                             print("⚽️Results recorded!")
                         }) {
                             Capsule()
